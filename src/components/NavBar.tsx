@@ -22,7 +22,7 @@ export function NavBar() {
           variant="outline-primary"
           className="rounded-circle"
         >
-          <FaCartPlus size="3x" />
+          <FaCartPlus size="100%" />
           <div
             className="rounded-circle bg-danger d-flex justify-content-center align-items-center"
             style={{
@@ -32,7 +32,7 @@ export function NavBar() {
               position: "absolute",
               bottom: 0,
               right: 0,
-              transform: "translate(25%, 25%",
+              transform: "translate(25%, 25%)",
             }}
           >
             3
