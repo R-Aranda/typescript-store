@@ -1,19 +1,8 @@
-import { useState } from "react";
 import { Row, Col } from "react-bootstrap";
 import { useQuery } from "react-query";
 import { StoreItem } from "../components/StoreItem";
-
-export type CartItemType = {
-  id: number;
-  category: string;
-  description: string;
-  image: string;
-  price: number;
-  title: string;
-  amount: number;
-};
-const getProducts = async (): Promise<CartItemType[]> =>
-  await (await fetch("https://fakestoreapi.com/products")).json();
+import { CartItemType } from "../hooks/getProducts";
+import { getProducts } from "../hooks/getProducts";
 
 const Store = () => {
   const { data, isLoading, error } = useQuery<CartItemType[]>(

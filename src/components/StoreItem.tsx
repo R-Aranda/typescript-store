@@ -1,6 +1,6 @@
 import { Button, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
-import { CartItemType } from "../pages/Store";
+import { CartItemType } from "../hooks/getProducts";
 import { formatCurrency } from "../utilities/formatCurrency";
 
 type Props = {
@@ -25,7 +25,7 @@ export function StoreItem({ item }: Props) {
         alt={item.title}
         height="200px"
         style={{
-          objectFit: "cover",
+          objectFit: "contain",
         }}
       />
       <Card.Body className="d-flex flex-column">
